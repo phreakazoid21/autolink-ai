@@ -1,6 +1,6 @@
 {
   "name": "autolink-ai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Uses LLMs to identify and backlink keywords in the active Obsidian note.",
   "main": "main.js",
   "scripts": {
