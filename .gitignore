@@ -8,7 +8,7 @@ main.js.map
 dist/
 *.tsbuildinfo
 
-# Obsidian plugin dev artifacts
+# Dev artifacts
 .obsidian/
 .vault/
 workspace.json

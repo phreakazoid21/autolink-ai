@@ -1,13 +1,14 @@
 {
   "id": "autolink-ai",
-  "name": "LLM AutoLinker",
+  "name": "LLM Autolinker",
   "version": "1.0.2",
   "author": "Alex Bardasu",
   "repo": "phreakazoid21/llm-autolinker",
   "authorUrl": "https://github.com/phreakazoid21",
-  "description": "Uses LLMs to identify and backlink keywords in the active Obsidian note.",
+  "description": "Automatically identifies keywords in the active note using OpenAI's API and creates backlinks.",
   "main": "main.js",
   "minAppVersion": "0.12.0",
+  "isDesktopOnly": false,
   "hotkeys": [
     {
         "command": "autolink-ai",
