@@ -1,0 +1,34 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Build output
+main.js
+main.js.map
+dist/
+*.tsbuildinfo
+
+# Obsidian plugin dev artifacts
+.obsidian/
+.vault/
+workspace.json
+cache/
+workspace/
+
+# TypeScript + Rollup
+rollup.config.js
+tsconfig.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# VSCode
+.vscode/
+
