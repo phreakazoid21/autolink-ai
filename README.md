@@ -1,6 +1,6 @@
 # 🔗 LLM AutoLinker
 
-**LLM AutoLinker** is an Obsidian plugin that uses a Large Language Model (LLM) to automatically identify and wrap thematically relevant phrases, people, and concepts in `[[wikilinks]]` — helping you build a smarter, more connected knowledge graph with zero manual effort.
+**LLM AutoLinker** is a plugin that uses a Large Language Model (LLM) to automatically identify and wrap thematically relevant phrases, people, and concepts in `[[wikilinks]]` — helping you build a smarter, more connected knowledge graph with zero manual effort.
 
 ---
 
@@ -24,8 +24,7 @@
 
 ## 🧠 Why Use It?
 
-Obsidian is great at linking — if you remember to.  
-LLM AutoLinker does it *for you*, by understanding the content and linking only meaningful, specific terms.
+Backlinks are great, but a pain to do manually. LLM AutoLinker does it *for you*, by understanding the content and linking only meaningful, specific terms.
 
 It’s like Zettelkasten meets AI.
 
