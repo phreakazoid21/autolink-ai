@@ -1,8 +1,10 @@
 {
   "id": "autolink-ai",
   "name": "LLM AutoLinker",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Alex Bardasu",
+  "repo": "phreakazoid21/llm-autolinker",
+  "authorUrl": "https://github.com/phreakazoid21",
   "description": "Uses LLMs to identify and link key phrases in Obsidian notes.",
   "main": "main.js",
   "minAppVersion": "0.12.0",
