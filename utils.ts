@@ -21,10 +21,8 @@ ${text}
     })
   });
 
-  console.log("Response status:", response.status);
   if (!response.ok) {
     const errorText = await response.text();
-    console.error("Error response body:", errorText);
     throw new Error(`Failed to fetch keywords: ${response.status} ${response.statusText}`);
   }
 
@@ -39,12 +37,10 @@ ${text}
 
 export async function listLLMModels(settings: LLMSettings): Promise<string[]> {
   if (settings.cachedModels && settings.cachedModels.length > 0) {
-    console.log("Using cached models:", settings.cachedModels);
     return settings.cachedModels;
   }
 
   if (!settings.openaiApiKey) {
-    console.warn("No OpenAI API key provided, using default models");
     return ['gpt-3.5-turbo', 'gpt-4'];
   }
 
@@ -55,15 +51,12 @@ export async function listLLMModels(settings: LLMSettings): Promise<string[]> {
       "Content-Type": "application/json"
     }
   });
-  console.log("Response status:", response.status);
   if (!response.ok) {
     const errorText = await response.text();
-    console.error("Error response body:", errorText);
     throw new Error(`Failed to fetch keywords: ${response.status} ${response.statusText}`);
   }
 
   const data = await response.json();
-  console.log("Response data:", data);
 
   if (data.object != "list") {
     throw new Error('Unexpected response format from OpenAI API: ' + JSON.stringify(data));
@@ -71,7 +64,6 @@ export async function listLLMModels(settings: LLMSettings): Promise<string[]> {
 
   let models: OpenAIModel[] = data.data.map((item: any) => {
     if (item.object !== 'model') {
-      console.warn(`Skipping non-model item: ${JSON.stringify(item)}`);
       return null;
     }
     return {

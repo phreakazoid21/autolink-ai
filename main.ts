@@ -47,18 +47,15 @@ export default class AutolinkAI extends Plugin {
     }
 
     const content = await this.app.vault.read(activeFile);
-    console.log("Original content:", content);
 
     let keywords: string[] = [];
     try {
       keywords = await getKeywordsFromLLM(content, this.settings);
     } catch (err) {
-      console.error("❌ LLM fetch failed", err);
       new Notice('❌ LLM failed. Check API key or console.');
       return;
     }
 
-    console.log("Keywords:", keywords);
 
     if (keywords.length === 0) {
       new Notice('⚠️ No keywords found');

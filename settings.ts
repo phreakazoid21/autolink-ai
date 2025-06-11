@@ -40,7 +40,7 @@ export class LLMSettingTab extends PluginSettingTab {
           await this.plugin.saveSettings();
         }));
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName('LLM Model')
       .setDesc('Choose which LLM model to use for keyword extraction.')
       .addDropdown(async drop => {
@@ -52,16 +52,13 @@ export class LLMSettingTab extends PluginSettingTab {
           try {
             models = await listLLMModels(this.plugin.settings);
           } catch (err) {
-            console.error("Failed to fetch models:", err);
             models = ['gpt-3.5-turbo', 'gpt-4'];
           }
         }
         if (models.length === 0) {
-          console.warn("No models found, using default gpt-3.5-turbo");
           models = ['gpt-3.5-turbo', 'gpt-4'];
         }
         this.plugin.settings.cachedModels = models; // Cache the models for future use
-        console.log("Available models:", models);
         models.forEach(model => drop.addOption(model, model));
         drop.setValue(this.plugin.settings.llmModel);
         drop.onChange(async (value) => {
@@ -70,7 +67,7 @@ export class LLMSettingTab extends PluginSettingTab {
         });
       });
 
-      new Setting(containerEl)
+    new Setting(containerEl)
       .setName('Max Tokens')
       .setDesc('Max number of output tokens for the LLM.')
       .addText(text => text
@@ -79,7 +76,6 @@ export class LLMSettingTab extends PluginSettingTab {
         .onChange(async (value) => {
           const num = parseInt(value);
           if (isNaN(num) || num <= 0) {
-            console.warn("Invalid max output tokens:", value);
             new Notice('Please enter a valid positive number');
             return;
           }

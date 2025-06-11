@@ -1,7 +1,7 @@
 {
   "name": "autolink-ai",
-  "version": "1.0.0",
-  "description": "Auto-wraps key phrases in Obsidian notes using LLMs.",
+  "version": "1.0.1",
+  "description": "Uses LLMs to identify and backlink keywords in the active Obsidian note.",
   "main": "main.js",
   "scripts": {
     "dev": "rollup -c --watch",
@@ -13,7 +13,7 @@
     "wikilinks",
     "auto-linking"
   ],
-  "author": "Alex",
+  "author": "Alex Bardasu",
   "license": "MIT",
   "type": "module",
   "devDependencies": {
