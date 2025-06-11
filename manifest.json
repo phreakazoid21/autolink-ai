@@ -1,0 +1,16 @@
+{
+  "id": "autolink-ai",
+  "name": "LLM AutoLinker",
+  "version": "0.1.0",
+  "author": "Alex Bardasu",
+  "description": "Uses LLMs to identify and link key phrases in Obsidian notes.",
+  "main": "main.js",
+  "minAppVersion": "0.12.0",
+  "hotkeys": [
+    {
+        "command": "autolink-ai",
+        "key": "Mod+Shift+L",
+        "description": "Auto-link key phrases in the current note"
+    }
+  ]
+}
