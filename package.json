@@ -1,6 +1,6 @@
 {
   "name": "autolink-ai",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Auto-wraps key phrases in Obsidian notes using LLMs.",
   "main": "main.js",
   "scripts": {
