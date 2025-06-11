@@ -51,12 +51,6 @@ It’s like Zettelkasten meets AI.
    npm install
    npm run build
 
-
-4. In Obsidian:
-
-   * Go to **Settings → Community Plugins**
-   * Enable **LLM AutoLinker**
-
 ---
 
 ## 🧪 Usage
